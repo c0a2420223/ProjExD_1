@@ -18,10 +18,12 @@ def main():
             if event.type == pg.QUIT: return
 
         screen.blit(bg_img, [-tmr, 0]) #練習6
+        screen.blit(bg_img,[1600,0]) #練習7
         screen.blit(koukaton_img,[300,200]) #練習2
         pg.display.update()
         tmr += 1        
         clock.tick(200) #練習4
+    
 
 
 if __name__ == "__main__":
