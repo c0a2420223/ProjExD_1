@@ -12,13 +12,15 @@ def main():
     bg_img = pg.image.load("fig/pg_bg.jpg")
     koukaton_img = pg.image.load("fig/3.png") #練習1
     koukaton_img = pg.transform.flip(koukaton_img,True,False) #練習2
+    bg_hanten_img=pg.transform.flip(bg_img,True,False) #練習8
+    
     tmr = 0
     while True:
         for event in pg.event.get():
             if event.type == pg.QUIT: return
 
         screen.blit(bg_img, [-tmr, 0]) #練習6
-        screen.blit(bg_img,[1600,0]) #練習7
+        screen.blit(bg_hanten_img, [1600,0]) #練習7
         screen.blit(koukaton_img,[300,200]) #練習2
         pg.display.update()
         tmr += 1        
